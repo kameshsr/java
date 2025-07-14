@@ -1,0 +1,190 @@
+Language fundaments
+1. Identifiers
+A name in java program is called identifier which can be used for identification purpose.
+it can be method name, class name, variable name, class name or label name.
+
+example:
+class Test{
+public static void main(String[] args){
+int x=10;
+}
+so theres are 5 identifiers in the above code.
+identifier: Test, main, args, x,String
+
+2. Rules for defining java identifiers
+a. a to z, A to Z, 0 to 9, _ and $ are allowed.
+example: total_number is valid identifier.
+If we use any other character then it is invalid identifier.
+b. identifier should not start with digit.
+example: 1st_name is invalid identifier.
+c. Java identifiers are case sensitive.
+of-course java language treated as case sensitive programming language.
+example: total_number and Total_Number are two different identifiers.
+d. There is no length limit for identifier but it is recommended to use meaningful names.
+e. We can't use reserved keywords as identifiers.
+example: int, class, public, static, void, etc are reserved keywords.
+int String = "Hello"; // invalid identifier
+but above code is valid because String is not reserved keyword in java. but it is not recommended to use it as identifier.
+All predefined classes and interface name we can use as identifier.
+even though it is valid but it is not a good programing practice because it reduces the readability of the code and creates confusion.
+
+which of the following are valid java identifiers?
+1. total_number
+2 total#
+3. 123total
+4. total123
+5. ca$h
+1. total_number is valid identifier.
+
+Reserved words in java
+53 reserved words in java.
+in java some words are reserved for specific purpose.
+these words are called reserved words or keywords.
+There are 50 keywords in java.
+There are 3 literals in java.
+eg. true, false, null
+there is no functionality for these literals.
+
+out of 50 keywords, 48 keywords are reserved and 2 keywords are not reserved.
+2 are unused keywords.
+1. const
+2. goto
+
+These two keywords are not reserved because they are not used in java programming.
+
+Keywords for data types
+1. byte
+2. short
+3. int
+4. long
+5. float
+6. double
+7. char
+8. boolean
+
+Keywords for control flow
+1. if
+2. else
+3. switch
+4. case
+5. default
+6. break
+7. continue
+8. return
+9. for
+10. while
+11. do
+
+keywords for modifiers
+1. public
+2. private
+3. protected
+4. static
+5. final
+6. abstract
+7. synchronized
+8. volatile
+9. transient
+10. native
+11. strictfp
+12. default
+
+keywords for exception handling
+1. try
+2. catch
+3. finally
+4. throw
+5. throws
+6. assert came in 1.4 version
+
+keywords for class
+1. class
+2. interface
+3. extends
+4. implements
+5. import
+6. package
+
+keywords for object creation
+1. new
+2. this
+3. super
+4. instanceof
+
+void keyword
+1. void is a keyword in java.
+in java, void is used to indicate that a method does not return any value.
+return type of the method is void.
+
+unused keywords
+1. const
+2. goto
+These two keywords are not reserved because they are not used in java programming.
+
+usage of goto created several problems in c programming.
+so java designers decided to remove goto keyword from java programming.
+// so goto is not reserved keyword in java.
+// but it is reserved keyword in c programming.
+// so we can't use goto as identifier in java programming.
+// but we can use it as identifier in c programming.
+
+use final instead of const
+
+goto and const are unused keywords in java.
+and if we are trying to use them as identifiers then it is valid but not recommended.
+
+reserved literals
+1. true
+2. false
+3. null
+
+true and false are values of boolean data type
+null is default value of object reference.
+
+enum
+came in java 1.5 version.
+we can use enum to define a group of named constants.
+enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+}
+
+conclusion
+Java identifiers are names used to identify variables, methods, classes, and other entities in a Java program. They must follow specific rules, such as starting with a letter or underscore, being case-sensitive, and not using reserved keywords. While there is no strict length limit, meaningful names are recommended for better readability. Java has 50 keywords, including data types, control flow statements, modifiers, exception handling keywords, and class-related keywords. Two unused keywords, `const` and `goto`, are not reserved in Java. Additionally, Java supports literals like `true`, `false`, and `null`, and introduced enums in version 1.5 for defining named constants.
+all java identifiers are lowercase alphabetical characters.
+in java we have only new keyword for object creation.
+and there is no delete keyword in java.
+because java has automatic garbage collection.
+strictfp came in java 1.2 version.
+assert came in java 1.4 version.
+enum came in java 1.5 version.
+strictfp but not strictFp.
+instanceof but not instanceOf.
+synchronized but not synchronize
+extends but not extend
+implements but not implement
+// import but not Imports
+const but not Constant
+
+which of the following are reserved keywords in java?
+new,delete
+goto, const
+break, continue, return, exit
+final, finally, finalize
+throw, throws, thrown
+notify, notifyAll
+implements, extends, imports
+None of the above
+
+// Answer:
+
+2nd video
+
+Data types in java
+
+java is a strongly typed programming language.
+every variable in java must have a data type.
+
+java is not purely object oriented programming language.
+because it has primitive data types.
+primitive data types are not objects.
+primitive data types are predefined data types in java.
