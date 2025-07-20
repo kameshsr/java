@@ -188,3 +188,17 @@ java is not purely object oriented programming language.
 because it has primitive data types.
 primitive data types are not objects.
 primitive data types are predefined data types in java.
+primitive data types are not classes.
+primitive data types are not interfaces.
+
+1. Primitive data types
+Primitive data types are the most basic data types in Java. They are predefined by the language and represent simple values. There are 
+8 primitive data types in Java:
+- byte: 8-bit signed integer, range from -128 to 127.
+- short: 16-bit signed integer, range from -32,768 to 32,767.
+- int: 32-bit signed integer, range from -2^31 to 2^31-1.
+- long: 64-bit signed integer, range from -2^63 to 2^63-1.
+- float: 32-bit floating-point number, used for single-precision decimal values.
+- double: 64-bit floating-point number, used for double-precision decimal values.
+- char: 16-bit Unicode character, used to represent a single character.
+- boolean: Represents one of two values: true or false.
