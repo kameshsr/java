@@ -4,6 +4,8 @@ DEF
 GHI
  */
 
+import javax.swing.table.TableCellEditor;
+
 public class Pattern2 {
     public static void main(String[] args){
         int i=0,j=0;
@@ -18,3 +20,9 @@ public class Pattern2 {
         }
     }
 }
+
+/*
+abc
+bcd
+cde
+ */

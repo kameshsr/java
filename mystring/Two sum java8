@@ -1,0 +1,31 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+       return IntStream.range(0, nums.length)
+       .mapToObj(
+        i-> {
+            if(map.containsKey(target-nums[i])){
+                return new int[]{map.get(target-nums[i]),i};
+            }
+            map.put(nums[i],i);
+            return null;
+        }
+       )
+       .filter(Objects::nonNull)
+       .findFirst()
+       .orElseThrow(()->new IllegalArgumentException("no pair"));
+    }
+}
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+       HashMap<Integer, Integer> map = new HashMap<>();
+       for(int i=0;i<nums.length;i++){
+        if(map.containsKey(target-nums[i])){
+            return new int[]{map.get(target-nums[i]),i};
+        }
+        map.put(nums[i],i);
+       }
+       throw new IllegalArgumentException("no pair");
+    }
+}
