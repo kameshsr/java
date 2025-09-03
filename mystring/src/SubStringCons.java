@@ -6,6 +6,7 @@ public class SubStringCons{
         String s1=new String(ascii,1,2);
         System.out.println(s1);
 
+
         StringBuffer sb = new StringBuffer("mallu");
         System.out.println("buffer before "+sb);
         System.out.println("charAt(1) before "+sb.charAt(1));
@@ -19,5 +20,7 @@ public class SubStringCons{
         int i=40;
         String s2= sb1.append("a! ").append(i).toString();
         System.out.println(s2);
+
+
     }
 }
