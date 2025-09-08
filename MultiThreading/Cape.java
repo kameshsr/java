@@ -21,7 +21,7 @@ public class Cape {
     }
 
     public static String uniquejava8(String str){
-        return str.chars().distinct().mapToObj(c->String.valueOf((char)c)).collect(Collectors.joining());
+        return str.chars().distinct().mapToObj(c-> String.valueOf((char)c)).collect(Collectors.joining());
     }
 
     public static String unique(String str){

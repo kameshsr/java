@@ -1,3 +1,5 @@
+import java.lang.String;
+
 //an example of deadlock
 class A{
     synchronized void foo(B b){

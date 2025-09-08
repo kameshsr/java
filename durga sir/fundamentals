@@ -5,11 +5,11 @@ it can be method name, class name, variable name, class name or label name.
 
 example:
 class Test{
-public static void main(String[] args){
+public static void main(String1[] args){
 int x=10;
 }
 so theres are 5 identifiers in the above code.
-identifier: Test, main, args, x,String
+identifier: Test, main, args, x,String1
 
 2. Rules for defining java identifiers
 a. a to z, A to Z, 0 to 9, _ and $ are allowed.
@@ -23,8 +23,8 @@ example: total_number and Total_Number are two different identifiers.
 d. There is no length limit for identifier but it is recommended to use meaningful names.
 e. We can't use reserved keywords as identifiers.
 example: int, class, public, static, void, etc are reserved keywords.
-int String = "Hello"; // invalid identifier
-but above code is valid because String is not reserved keyword in java. but it is not recommended to use it as identifier.
+int String1 = "Hello"; // invalid identifier
+but above code is valid because String1 is not reserved keyword in java. but it is not recommended to use it as identifier.
 All predefined classes and interface name we can use as identifier.
 even though it is valid but it is not a good programing practice because it reduces the readability of the code and creates confusion.
 
