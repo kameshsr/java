@@ -23,6 +23,7 @@ class Solution {
         
 //        Solution sol = new Solution();
        String[] strs = {"flower","flow","floght"};
+//       strs[0].c
        System.out.println(longestCommonPrefix1(strs));
 //        System.out.println(sol.longestCommonPrefix(strs)); // Output: "fl"
 
