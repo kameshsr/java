@@ -1,57 +1,57 @@
-//an example of deadlock
-class A{
-    synchronized void foo(B b){
-        String name =Thread.currentThread().getName();
-        System.out.println(name+" entered a foo thread");
-        try{
-            Thread.sleep(1000);
-        }catch(InterruptedException e){
-            System.out.println("a thread interrupted");
-        }
-        System.out.println("trying to call b.last");
-        b.last();
-    }
-    synchronized void last(){
-        System.out.println("inside a .last");
-    }
-}
-class B{
-    synchronized void bar(A a){
-        String name=Thread.currentThread().getName();
-        System.out.println(name+" entered a thread");
-        try{
-
-            Thread.sleep(1000);
-        }catch(InterruptedException e){
-            System.out.println(name+" interrupted");
-        }
-        System.out.println("trying to call a.last");
-        a.last();
-    }
-    synchronized void last(){
-
-        System.out.println("inside b.last");
-    }
-}
 class Deadlock implements Runnable{
-    A a =new A();
-    B b = new B();
     Thread t;
+    DeadOne d1=new DeadOne();
+    DeadTwo d2=new DeadTwo();
     Deadlock(){
-        Thread.currentThread().setName("main thread");
-        t = new Thread(this,"racing thread");
+        t=new Thread(this,"main");
     }
     void deadlockstart(){
         t.start();
-        a.foo(b);
-        System.out.println("back in main thread");
+        d1.foo(d2);
     }
     public void run(){
-        b.bar(a);
-        System.out.println("back in other thread");
+        d2.bar(d1);
     }
     public static void main(String args[]){
-        Deadlock d= new Deadlock();
+        Deadlock d=new Deadlock();
         d.deadlockstart();
+
     }
 }
+
+
+class DeadOne {
+    synchronized void foo(DeadTwo d){
+        try{
+            System.out.println("in Deadone");
+            Thread.sleep(1000);
+        }
+        catch(InterruptedException e){
+            System.out.println("Deadone interrupted");
+        }
+        System.out.println("trying to call DeadTwo.last()");
+        d.last();
+    }
+    synchronized void last(){
+        System.out.println("I am deaone last");
+    }
+}
+
+class DeadTwo{
+    synchronized void bar(DeadOne d){
+        try{
+            System.out.println("in DeadTwo");
+            Thread.sleep(2000);
+        }
+        catch(InterruptedException e){
+            System.out.println("interrupted class deadtwo");
+        }
+        System.out.println("calling deadone last method");
+        d.last();
+    }
+    synchronized void last(){
+        System.out.println("I am last");
+    }
+}
+
+
